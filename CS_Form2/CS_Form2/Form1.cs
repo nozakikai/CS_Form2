@@ -61,7 +61,18 @@ namespace CS_Form2
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("sakuma ゆいと");
+            // MessageBox.Show("グー");
+            Progress("グー");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Progress("チョキ");
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Progress("パー");
         }
 
         private string GetCpuHand()
@@ -91,30 +102,30 @@ namespace CS_Form2
             {
                 if (cpuHand == "グー")
                 {
-                    result = "DRAW";
+                    result = "DRAW　引き分けです";
                 }
                 else if (cpuHand == "チョキ")
                 {
-                    result = "WIN";
+                    result = "WIN　あなたの勝利です。おめでとう！";
                 }
                 else
                 {
-                    result = "LOSE";
+                    result = "LOSE　あなたの負けです。悔しい！";
                 }
             }
             else if(playerHand == "チョキ")    ///チョキを出したとき　
             {
                 if (cpuHand == "チョキ")
                 {
-                    result = "DRAW";
+                    result = "DRAW　引き分けです";
                 }
                 else if (cpuHand == "パー")
                 {
-                    result = "WIN";
+                    result = "WIN　あなたの勝利です。おめでとう！";
                 }
                 else
                 {
-                    result = "LOSE";
+                    result = "LOSE　あなたの負けです。悔しい！";
                 }
             }
             else                                ///パーを出したとき
@@ -122,15 +133,15 @@ namespace CS_Form2
 
                 if (cpuHand == "パー")
                 {
-                    result = "DRAW";
+                    result = "DRAW　引き分けです";
                 }
                 else if (cpuHand == "グー")
                 {
-                    result = "WIN";
+                    result = "WIN　あなたの勝利です。おめでとう！　";
                 }
                 else
                 {
-                    result = "LOSE";
+                    result = "LOSE　あなたの負けです。悔しい！";
                 }
             }
             return result;
@@ -141,8 +152,18 @@ namespace CS_Form2
             string cpuHand = GetCpuHand();
 
             string result = Decides(playerHand, cpuHand);
+
+            labelPLAYER.Text = playerHand;
+            labelCPU.Text = cpuHand;
+
+            MessageBox.Show(result);
+
+            labelPLAYER.Text = ("グー、チョキ、パー");
+            labelCPU.Text = ("グー、チョキ、パー");
+
         }
 
+       
     }
 
 }

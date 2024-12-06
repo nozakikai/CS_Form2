@@ -49,20 +49,20 @@
             // labelCPU
             // 
             this.labelCPU.AutoSize = true;
-            this.labelCPU.Location = new System.Drawing.Point(439, 9);
+            this.labelCPU.Location = new System.Drawing.Point(468, 41);
             this.labelCPU.Name = "labelCPU";
-            this.labelCPU.Size = new System.Drawing.Size(121, 18);
+            this.labelCPU.Size = new System.Drawing.Size(129, 18);
             this.labelCPU.TabIndex = 1;
-            this.labelCPU.Text = "CPUの出した手";
+            this.labelCPU.Text = "グー、チョキ、パー";
             // 
             // labelPLAYER
             // 
             this.labelPLAYER.AutoSize = true;
-            this.labelPLAYER.Location = new System.Drawing.Point(45, 205);
+            this.labelPLAYER.Location = new System.Drawing.Point(468, 187);
             this.labelPLAYER.Name = "labelPLAYER";
-            this.labelPLAYER.Size = new System.Drawing.Size(122, 18);
+            this.labelPLAYER.Size = new System.Drawing.Size(129, 18);
             this.labelPLAYER.TabIndex = 2;
-            this.labelPLAYER.Text = "自分の出した手";
+            this.labelPLAYER.Text = "グー、チョキ、パー";
             // 
             // button1
             // 
@@ -82,6 +82,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "チョキ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -91,6 +92,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "パー";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // panel2
             // 
